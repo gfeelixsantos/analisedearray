@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Análise de números</title>
+</head>
+<body>
+        <section class="painel">
+            <header class="titulo">Análise de números</header>
+            <div>
+                <label>Envie um número</label>
+                <input type="number" name="numero" id="numero"  onkeypress="return event.charCode >= 48 && event.charCode <= 57"  id="numberInput" >
+                <button id="enviar">Enviar</button>
+            </div>
+            <label>Número(s) enviado(s)</label>
+            <div>
+                <select name="resultados" id="resultados"></select> 
+            </div>
+            <button class="gerar" id="gerar">GERAR RESULTADOS</button>  
+            <div id="arraylist">
+                <p id="lista"></p>
+                <p id="menorNumero"></p>
+                <p id="maiorNumero"></p>
+                <p id="ordenado"></p>
+                <p id="somatoria"></p>
+                <p id="media"></p>
+            </div>
+            <button id="botaoLimpar">Limpar</button> 
+        </section>
+        <footer>Projeto Curso em Vídeo 2023</footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>

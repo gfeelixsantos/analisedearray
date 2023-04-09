@@ -1,0 +1,70 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Genos&display=swap');
+
+/* reset css */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg?w=2000);
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+section {
+    font-family: Genos, Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    color: white;
+    padding: 30px;
+    background-color: rgba(0, 0, 0,.5);
+    border-radius: 50px;
+    width: max-content;
+    margin: auto;
+}
+
+.titulo {
+    font-size: 38px;
+    text-align: center;
+    background-color: black;
+    border-radius: 50px;
+}
+
+div {
+    margin-top: 20px;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+}
+
+select {
+    width: 150px;
+    height: 200px;
+    text-align: center;
+    font-size: 20px;
+} 
+
+.gerar {
+    width: 200px;
+    font-size: 16px;
+}
+
+footer {
+    color: white;
+    font-weight: bolder;
+}

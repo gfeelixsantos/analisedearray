@@ -1,12 +1,12 @@
 //INPUTS: Número e botão
 let entradaNumero = document.querySelector('#numero')
-entradaNumero.addEventListener('keyup', inputCheck)
 
 let enviar = document.querySelector('#enviar')
+enviar.addEventListener('click', verificanumero)
 
 let resultados = document.querySelector('#resultados')
 resultados.setAttribute("Size","2")
-enviar.addEventListener('click', addarray)
+
 
 let gerar = document.querySelector('#gerar')
 gerar.addEventListener('click', gerarResultados)
@@ -19,22 +19,24 @@ botaoLimpar.addEventListener('click', limpar)
 let lista = [] 
 
 
-function inputCheck (entradaNumero){
-
-    const char = String.fromCharCode(entradaNumero.keyCode)
-    console.log(char);
-    
+//FUNÇÃO QUE VERIFICA A ENTRADA ENTRE 0 E 100
+function verificanumero(){
+    Number(entradaNumero)
+    if (entradaNumero.value < 1 || entradaNumero.value > 100){
+        alert('❌Erro, verifique o número enviado') 
+    } else {
+        addarray()
+    }
 }
-const patternInput = '[0-9][.]{3}'
 
-
-
+//FUNÇÃO QUE ADICIONA ELEMENTO AO ARRAY
 function addarray(){ 
     //CRIA ARRAY E ADICIONA ELEMENTOS ENVIADOS
     resultados.appendChild(document.createElement('option')).innerHTML=`${entradaNumero.value}`
     return lista.push(entradaNumero.value)  
 }
 
+//FUNÇÃO PARA CALCULAR OS RESULTADOS QUE SERÃO APRESENTADOS
 function gerarResultados(){
     //ARPESENTA NUMEROS ENVIADOS
     document.querySelector('#lista').innerHTML= `Os números enviados foram: ${lista}`
@@ -64,9 +66,8 @@ function gerarResultados(){
     document.querySelector('#somatoria').innerHTML=`A soma dos números são: ${resultadoSoma}`
 
     //MEDIA PONDERADA
-    document.querySelector('#media').innerHTML= `Sua média ponderada é: ${(resultadoSoma / novoArray.length).toFixed(2)}`
+    document.querySelector('#media').innerHTML= `Sua média ponderada é: ${(resultadoSoma / novoArray.length).toFixed(0)}`
 }
-
 
 //FUNÇÃO PARA ATUALIZAR A PÁGINA
 function limpar() {

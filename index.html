@@ -11,9 +11,9 @@
         <section class="painel">
             <header class="titulo">Análise de números</header>
             <div>
-                <label>Envie um número</label>
+                <label>Envie números entre 1 e 100</label>
                 <input type="number" name="numero" id="numero"  onkeypress="return event.charCode >= 48 && event.charCode <= 57"  id="numberInput" >
-                <button id="enviar">Enviar</button>
+                <button id="enviar" class="gerar" >ENVIAR</button>
             </div>
             <label>Número(s) enviado(s)</label>
             <div>
@@ -28,7 +28,7 @@
                 <p id="somatoria"></p>
                 <p id="media"></p>
             </div>
-            <button id="botaoLimpar">Limpar</button> 
+            <button id="botaoLimpar" class="gerar" >LIMPAR</button> 
         </section>
         <footer>Projeto Curso em Vídeo 2023</footer>
     <script src="./js/main.js"></script>
